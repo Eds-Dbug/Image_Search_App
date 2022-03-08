@@ -1,0 +1,33 @@
+leftOff{
+    section: [84,94,100,109,113],
+    time: ['11:30','2:15','1:02','1:08','9:28'],
+    date: [02/08/22,02/14/22,02/18/22,02/22/22,02/23/22]
+}
+Notes{
+    section:92,
+    notes:'
+
+Effy
+2 upvotes
+4 months ago
+
+I'd like to add some information I learned from the book JavaScript the Definitive Guide.
+
+I. this in nested functions
+
+1. if a nested function is invoked as a method, its this value is the object it was invoked on.
+
+2. if a nested function(that is not an arrow function) is invoked as a function, then its this value will be either the global object(non-strict mode) or undefined(strict mode).
+
+And any code in an ES6 module is automatically strict code.
+
+3. arrow functions inherit their this value from the environment in which they are defined.
+
+II. bind() will bind a function to an object. like f.bind(o)
+
+
+In our case, onFormSubmit is invoked as a function, its this value is undefined. render()  is invoked as a method, its this value is SearchBar . Our solution changes onFormSubmit  to arrow function, so its this value become the environment in which it is defined, which is SearchBar.'
+
+section: 109
+, notes ' Destructuring is awesome {id, name} = x , const x={id:11, name:'something'}'
+}
